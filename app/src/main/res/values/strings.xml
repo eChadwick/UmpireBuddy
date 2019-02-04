@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Umpire Buddy</string>
+    <string name="strike_button_text">Strike</string>
+    <string name="ball_button_text">Ball</string>
+    <string name="count_string">Count</string>
+    <string name="zero">0</string>
+    <string name="out_message">Yeerrr Oughta There!</string>
+    <string name="walk_message">Take Your Base!</string>
+    <string name="clear_button_text">Reset</string>
+    <string name="dash">-</string>
+</resources>
