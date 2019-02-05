@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Umpire Buddy</string>
+    <string name="app_name">Umpbot</string>
     <string name="strike_button_text">Strike</string>
     <string name="ball_button_text">Ball</string>
     <string name="count_string">Count</string>
