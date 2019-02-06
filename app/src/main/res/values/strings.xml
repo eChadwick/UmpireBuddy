@@ -6,6 +6,7 @@
     <string name="zero">0</string>
     <string name="out_message">Yeerrr Oughta There!</string>
     <string name="walk_message">Take Your Base!</string>
-    <string name="clear_button_text">Reset</string>
+    <string name="reset_button_text">Reset</string>
     <string name="dash">-</string>
+    <string name="about">About</string>
 </resources>
