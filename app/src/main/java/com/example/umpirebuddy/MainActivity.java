@@ -2,12 +2,12 @@ package com.example.umpirebuddy;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toolbar;
-
-import static com.example.umpirebuddy.R.id.toolbar;
+import android.support.v7.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,9 +18,38 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar mTopToolbar = (Toolbar) findViewById(R.id.toolbar2);
+        setSupportActionBar(mTopToolbar);
     }
 
-    public void onStrike(View view) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_actions, menu);
+        return  true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem clickedItem) {
+        switch(clickedItem.getItemId()) {
+            case R.id.menu_reset:
+                // Update internal counters
+                balls = 0;
+                strikes = 0;
+
+                // Update show counters
+                final TextView ballCount = (TextView) findViewById(R.id.textView3);
+                ballCount.setText(Integer.toString(0));
+                final TextView strikeCount = (TextView) findViewById(R.id.textView2);
+                strikeCount.setText(Integer.toString(0));
+                return true;
+            default:
+                return super.onOptionsItemSelected(clickedItem);
+
+
+        }
+    }
+
+        public void onStrike(View view) {
         strikes++;
         final TextView ballCount = (TextView) findViewById(R.id.textView2);
         ballCount.setText(Integer.toString(strikes));
@@ -68,5 +97,17 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.textView6).setVisibility(view.GONE);
         findViewById(R.id.textView7).setVisibility(view.GONE);
         findViewById(R.id.button5).setVisibility(view.GONE);
+    }
+
+    public void onReset(View view) {
+//      Update internal counters
+        balls = 0;
+        strikes = 0;
+
+//      Update show counters
+        final TextView ballCount = (TextView) findViewById(R.id.textView3);
+        ballCount.setText(Integer.toString(0));
+        final TextView strikeCount = (TextView) findViewById(R.id.textView2);
+        strikeCount.setText(Integer.toString(0));
     }
 }
