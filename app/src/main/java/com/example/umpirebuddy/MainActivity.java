@@ -1,5 +1,6 @@
 package com.example.umpirebuddy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -42,10 +43,11 @@ public class MainActivity extends AppCompatActivity {
                 final TextView strikeCount = (TextView) findViewById(R.id.textView2);
                 strikeCount.setText(Integer.toString(0));
                 return true;
+            case R.id.menu_about:
+                Intent intent = new Intent(this, AboutActivity.class);
+                startActivity(intent);
             default:
                 return super.onOptionsItemSelected(clickedItem);
-
-
         }
     }
 

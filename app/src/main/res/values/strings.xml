@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Umpbot</string>
+    <string name="app_name">UmpBot</string>
     <string name="strike_button_text">Strike</string>
     <string name="ball_button_text">Ball</string>
     <string name="count_string">Count</string>
@@ -9,4 +9,6 @@
     <string name="reset_button_text">Reset</string>
     <string name="dash">-</string>
     <string name="about">About</string>
+    <string name="about_page_author">Author: Eric Chadwick</string>
+    <string name="about_page_title">UmpBot</string>
 </resources>
