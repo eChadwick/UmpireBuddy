@@ -80,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
 //          Hide Strike and Ball buttons
             findViewById(R.id.button).setVisibility(view.GONE);
             findViewById(R.id.button2).setVisibility(view.GONE);
+
+            strikeOuts++;
+            final TextView strikeoutCount = findViewById(R.id.strikeoutCounter);
+            strikeoutCount.setText(Integer.toString(strikeOuts));
+            SharedPreferences prefs = this.getPreferences(Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putInt("strikeOuts", strikeOuts);
+            editor.commit();
         }
     }
 
