@@ -11,4 +11,5 @@
     <string name="about">About</string>
     <string name="about_page_author">Author: Eric Chadwick</string>
     <string name="about_page_title">UmpBot</string>
+    <string name="strikeOuts">Strikeouts:</string>
 </resources>
